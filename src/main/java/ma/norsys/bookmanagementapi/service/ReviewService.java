@@ -83,8 +83,8 @@ public class ReviewService {
     }
 
     private ReviewDto mapReviewToDto(Review review) {
-        ReviewDto reviewDto = new ReviewDto(review.getId(), review.getComment(),
-                review.getBook().getTitle(), review.getUser().getFullName());
+        ReviewDto reviewDto = new ReviewDto(review.getId(), review.getComment(),review.getBook().getId(),
+                review.getBook().getTitle(), review.getUser().getId(), review.getUser().getFullName());
 
         return reviewDto;
     }

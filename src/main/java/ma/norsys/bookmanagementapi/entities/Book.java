@@ -18,6 +18,9 @@ public class Book {
     private String author;
     private String genre;
 
-    @OneToMany(mappedBy = "book")
+    @OneToMany(mappedBy = "book", cascade = CascadeType.ALL)
     private List<Review> reviews;
+
+    @OneToMany(mappedBy = "book", cascade = CascadeType.ALL)
+    private List<BookLoan> bookLoans;
 }
